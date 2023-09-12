@@ -16,42 +16,10 @@ class HomeScreen extends StatelessWidget {
       description:
           "Apple is set to announce new iPhone models. The company is holding a keynote at 10 AM PT. And you'll be able to watch the event right here.",
       content:
-          "Apple is set to announce new iPhone models during its “Wonderlust” keynote on Tuesday at 10 AM PT (1 PM in New York, 6 PM in London, 7 PM in Paris), and youll be able to watch the event right here.\r\n… [+1702 chars]",
+          "Apple is set to announce new iPhone models during its “Wonderlust” keynote on Tuesday at 10 AM PT (1 PM in New York, 6 PM in London, 7 PM in Paris), and youll be able to watch the event right here.Apple is set to announce new iPhone models during its “Wonderlust” keynote on Tuesday at 10 AM PT (1 PM in New York, 6 PM in London, 7 PM in Paris), and youll be able to watch the event right here.",
       imgUrl:
           'https://techcrunch.com/wp-content/uploads/2023/09/GettyImages-1421648897.jpg?resize=1200,826',
-    ),
-    Article(
-      author: 'Romain Dillet',
-      title:
-          'Apple Event 2023: How to watch the iPhone 15 reveal tomorrow - TechCrunch',
-      description:
-          "Apple is set to announce new iPhone models. The company is holding a keynote at 10 AM PT. And you'll be able to watch the event right here.",
-      content:
-          "Apple is set to announce new iPhone models during its “Wonderlust” keynote on Tuesday at 10 AM PT (1 PM in New York, 6 PM in London, 7 PM in Paris), and youll be able to watch the event right here.\r\n… [+1702 chars]",
-      imgUrl:
-          'https://techcrunch.com/wp-content/uploads/2023/09/GettyImages-1421648897.jpg?resize=1200,826',
-    ),
-    Article(
-      author: 'Romain Dillet',
-      title:
-          'Apple Event 2023: How to watch the iPhone 15 reveal tomorrow - TechCrunch',
-      description:
-          "Apple is set to announce new iPhone models. The company is holding a keynote at 10 AM PT. And you'll be able to watch the event right here.",
-      content:
-          "Apple is set to announce new iPhone models during its “Wonderlust” keynote on Tuesday at 10 AM PT (1 PM in New York, 6 PM in London, 7 PM in Paris), and youll be able to watch the event right here.\r\n… [+1702 chars]",
-      imgUrl:
-          'https://techcrunch.com/wp-content/uploads/2023/09/GettyImages-1421648897.jpg?resize=1200,826',
-    ),
-    Article(
-      author: 'Romain Dillet',
-      title:
-          'Apple Event 2023: How to watch the iPhone 15 reveal tomorrow - TechCrunch',
-      description:
-          "Apple is set to announce new iPhone models. The company is holding a keynote at 10 AM PT. And you'll be able to watch the event right here.",
-      content:
-          "Apple is set to announce new iPhone models during its “Wonderlust” keynote on Tuesday at 10 AM PT (1 PM in New York, 6 PM in London, 7 PM in Paris), and youll be able to watch the event right here.\r\n… [+1702 chars]",
-      imgUrl:
-          'https://techcrunch.com/wp-content/uploads/2023/09/GettyImages-1421648897.jpg?resize=1200,826',
+      date: '12 Sep 2023 - 12:40',
     ),
   ];
 
@@ -62,7 +30,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: kBackgroundClr,
       appBar: AppBar(title: const Text('News')),
-      body: ArticlesListView(articles: articles),
+      body: SafeArea(child: ArticlesListView(articles: articles)),
     );
   }
 }

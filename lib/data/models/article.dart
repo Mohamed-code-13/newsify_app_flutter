@@ -4,6 +4,7 @@ class Article {
   final String description;
   final String content;
   final String imgUrl;
+  final String date;
 
   const Article({
     required this.author,
@@ -11,5 +12,6 @@ class Article {
     required this.description,
     required this.content,
     required this.imgUrl,
+    required this.date,
   });
 }

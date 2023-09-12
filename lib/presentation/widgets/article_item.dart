@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/presentation/screens/article_details_screen.dart';
 
 import '../../data/models/article.dart';
 import '../../helper/helper_functions.dart';
@@ -11,21 +12,29 @@ class ArticleItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      // padding: const EdgeInsets.all(8.0),
-      margin: const EdgeInsets.all(8.0),
-      decoration: BoxDecoration(
-        color: kPrimaryClr,
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          _getImage(context),
-          _getTitle(),
-          // const Divider(color: Colors.grey, thickness: 1),
-          _getDescription(),
-        ],
+    return GestureDetector(
+      onTap: () {
+        Navigator.of(context).pushNamed(
+          ArticleDetailsScreen.routeName,
+          arguments: article,
+        );
+      },
+      child: Container(
+        // padding: const EdgeInsets.all(8.0),
+        margin: const EdgeInsets.all(8.0),
+        decoration: BoxDecoration(
+          color: kPrimaryClr,
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _getImage(context),
+            _getTitle(),
+            // const Divider(color: Colors.grey, thickness: 1),
+            _getDescription(),
+          ],
+        ),
       ),
     );
   }
