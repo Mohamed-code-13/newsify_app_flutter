@@ -14,7 +14,7 @@ class CategoryItem extends StatelessWidget {
       height: getScreenHeight(context) / 6.5,
       width: getScreenWidth(context) / 2.5,
       // padding: const EdgeInsets.all(16.0),
-      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
+      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         image: DecorationImage(

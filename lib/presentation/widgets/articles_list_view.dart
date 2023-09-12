@@ -10,14 +10,10 @@ class ArticlesListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RefreshIndicator(
-      onRefresh: () async {},
-      child: ListView.builder(
-        itemCount: articles.length,
-        physics: const BouncingScrollPhysics(),
-        itemBuilder: (ctx, index) {
-          return ArticleItem(article: articles[index]);
-        },
+    return SliverList(
+      delegate: SliverChildBuilderDelegate(
+        childCount: articles.length,
+        (context, index) => ArticleItem(article: articles[index]),
       ),
     );
   }
