@@ -4,6 +4,7 @@ import 'package:news_app/presentation/screens/article_details_screen.dart';
 import '../../data/models/article.dart';
 import '../../helper/helper_functions.dart';
 import '../../helper/my_colors.dart';
+import 'custom_image.dart';
 
 class ArticleItem extends StatelessWidget {
   final Article article;
@@ -29,25 +30,15 @@ class ArticleItem extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _getImage(context),
+            CustomImage(
+              imgUrl: article.imgUrl,
+              title: article.title,
+            ),
             _getTitle(),
             // const Divider(color: Colors.grey, thickness: 1),
             _getDescription(),
           ],
         ),
-      ),
-    );
-  }
-
-  Widget _getImage(BuildContext context) {
-    return ClipRRect(
-      borderRadius: const BorderRadius.only(
-        topLeft: Radius.circular(10),
-        topRight: Radius.circular(10),
-      ),
-      child: Image.network(
-        article.imgUrl,
-        width: getScreenWidth(context),
       ),
     );
   }

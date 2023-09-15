@@ -4,13 +4,13 @@ import 'helper/app_router.dart';
 import 'helper/my_colors.dart';
 
 void main() {
-  runApp(const NewsApp());
+  runApp(NewsApp());
 }
 
 class NewsApp extends StatelessWidget {
-  final AppRouter appRouter = const AppRouter();
+  final AppRouter appRouter = AppRouter();
 
-  const NewsApp({super.key});
+  NewsApp({super.key});
 
   @override
   Widget build(BuildContext context) {
